@@ -1,3 +1,4 @@
+import { ArrowForwardRounded, PlayArrowRounded } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
 const hotspots = [
@@ -8,8 +9,19 @@ const hotspots = [
   { label: "Company", to: "/contact", className: "reference-hero__hotspot--company" },
   { label: "Login", to: "/login", className: "reference-hero__hotspot--login" },
   { label: "Get Started", to: "/rate-calculator", className: "reference-hero__hotspot--top-cta" },
-  { label: "Start Shipping Now", to: "/rate-calculator", className: "reference-hero__hotspot--main-cta" },
-  { label: "Book a Demo", to: "/contact", className: "reference-hero__hotspot--demo" },
+];
+
+const heroCtas = [
+  {
+    label: "Start Shipping Now",
+    to: "/rate-calculator",
+    className: "reference-hero__cta--main",
+  },
+  {
+    label: "Book a Demo",
+    to: "/contact",
+    className: "reference-hero__cta--demo",
+  },
 ];
 
 const pulses = [
@@ -57,6 +69,16 @@ export default function ReferenceHero() {
           to={hotspot.to}
         />
       ))}
+
+      <div className="reference-hero__cta-layer" aria-label="Hero calls to action">
+        {heroCtas.map(({ label, to, className }) => (
+          <Link key={label} className={`reference-hero__cta ${className}`} to={to}>
+            {className.includes("demo") ? <PlayArrowRounded className="reference-hero__cta-icon" /> : null}
+            <span>{label}</span>
+            {className.includes("main") ? <ArrowForwardRounded className="reference-hero__cta-icon" /> : null}
+          </Link>
+        ))}
+      </div>
     </section>
   );
 }
