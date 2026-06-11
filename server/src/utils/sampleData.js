@@ -15,6 +15,14 @@ export const sampleUsers = [
     phone: "+910000000000",
     company: "Intlexpress",
   },
+  {
+    name: "Support Lead",
+    email: "support@intlexpress.co.in",
+    password: "Intlexpress@123",
+    role: "support",
+    phone: "+91-95717-11909",
+    company: "Intlexpress",
+  },
 ];
 
 export function buildSampleShipments(userId) {

@@ -2652,6 +2652,12 @@ img {
   gap: 10px;
 }
 
+.site-footer__contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
 .site-footer__link {
   color: var(--muted);
   font-weight: 700;
@@ -2666,6 +2672,10 @@ img {
 .site-footer__column {
   display: grid;
   gap: 12px;
+}
+
+.site-footer__info--address {
+  grid-column: 1 / -1;
 }
 
 .site-footer__bottom {
@@ -3059,6 +3069,14 @@ img {
 }
 
 @media (max-width: 480px) {
+  .site-footer__contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer__info--address {
+    grid-column: auto;
+  }
+
   .feature-poster-grid {
     grid-template-columns: 1fr;
   }

@@ -90,6 +90,16 @@ export default function ContactPage() {
                     {brand.email}
                   </a>
                 </div>
+                {brand.bookingEmail ? (
+                  <div>
+                    <Typography className="contact-card__label" variant="body2">
+                      Booking Email
+                    </Typography>
+                    <a className="contact-card__link" href={`mailto:${brand.bookingEmail}`}>
+                      {brand.bookingEmail}
+                    </a>
+                  </div>
+                ) : null}
                 <div>
                   <Typography className="contact-card__label" variant="body2">
                     Address

@@ -2,7 +2,7 @@ import { trackingSamples } from "../data/siteData";
 import { buildRateSummary, generateCourierQuotes } from "../utils/calculators";
 
 const validCredentials = {
-  email: "support@intlexpress.com",
+  email: "support@intlexpress.co.in",
   password: "Intlexpress@123",
 };
 

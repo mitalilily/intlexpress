@@ -67,21 +67,27 @@ export default function Footer() {
           <Typography className="site-footer__title" variant="subtitle1">
             Contact
           </Typography>
-          <a className="site-footer__info" href={`tel:${brand.phone}`}>
-            <CallRounded fontSize="small" />
-            <span>{brand.phone}</span>
-          </a>
-          <a className="site-footer__info" href={`tel:${brand.supportPhone}`}>
-            <CallRounded fontSize="small" />
-            <span>{brand.supportPhone}</span>
-          </a>
-          <a className="site-footer__info" href={`mailto:${brand.email}`}>
-            <EmailRounded fontSize="small" />
-            <span>{brand.email}</span>
-          </a>
-          <div className="site-footer__info site-footer__info--address">
-            <LocationOnRounded fontSize="small" />
-            <span>{brand.address}</span>
+          <div className="site-footer__contact-grid">
+            <a className="site-footer__info" href={`tel:${brand.phone}`}>
+              <CallRounded fontSize="small" />
+              <span>{brand.phone}</span>
+            </a>
+            <a className="site-footer__info" href={`mailto:${brand.email}`}>
+              <EmailRounded fontSize="small" />
+              <span>{brand.email}</span>
+            </a>
+            <a className="site-footer__info" href={`tel:${brand.supportPhone}`}>
+              <CallRounded fontSize="small" />
+              <span>{brand.supportPhone}</span>
+            </a>
+            <a className="site-footer__info" href={`mailto:${brand.bookingEmail}`}>
+              <EmailRounded fontSize="small" />
+              <span>{brand.bookingEmail}</span>
+            </a>
+            <div className="site-footer__info site-footer__info--address">
+              <LocationOnRounded fontSize="small" />
+              <span>{brand.address}</span>
+            </div>
           </div>
         </div>
       </div>

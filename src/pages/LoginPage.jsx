@@ -3,11 +3,12 @@ import { Alert, Button, Chip, Paper, TextField, Typography } from "@mui/material
 import MotionFade from "../components/common/MotionFade";
 import PageHero from "../components/common/PageHero";
 import { useAppData } from "../context/AppDataContext";
+import { brand } from "../data/siteData";
 
 export default function LoginPage() {
   const { authLoading, session, signIn, signOut } = useAppData();
   const [credentials, setCredentials] = useState({
-    email: "support@intlexpress.com",
+    email: brand.email,
     password: "Intlexpress@123",
   });
   const [status, setStatus] = useState({ type: "", message: "" });
@@ -51,7 +52,7 @@ export default function LoginPage() {
               </Typography>
               <div className="login-panel__credential">
                 <span>Email</span>
-                <strong>support@intlexpress.com</strong>
+                <strong>{brand.email}</strong>
               </div>
               <div className="login-panel__credential">
                 <span>Password</span>
