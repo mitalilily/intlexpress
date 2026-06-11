@@ -44,14 +44,6 @@ export default function Navbar() {
 
           <div className="site-header__actions">
             <Button
-              className="button-ghost"
-              component={Link}
-              to="/contact"
-              variant="outlined"
-            >
-              Book Demo
-            </Button>
-            <Button
               className="button-primary"
               component={Link}
               endIcon={<NorthEastRounded />}

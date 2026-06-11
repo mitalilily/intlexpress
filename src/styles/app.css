@@ -1771,8 +1771,18 @@ img {
 }
 
 .feature-poster-grid {
+  display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
+  align-items: stretch;
+  width: min(100%, 980px);
+  margin-inline: auto;
+}
+
+.feature-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .process-grid--four {
@@ -3081,7 +3091,7 @@ img {
   }
 
   .feature-poster-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .why-choose-block__grid {

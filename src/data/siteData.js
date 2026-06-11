@@ -21,7 +21,6 @@ export const navLinks = [
   { label: "Rates", to: "/rate-calculator" },
   { label: "Weight", to: "/weight-calculator" },
   { label: "Contact", to: "/contact" },
-  { label: "Login", to: "/login" },
 ];
 
 export const heroHighlights = [
